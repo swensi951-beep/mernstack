@@ -1,0 +1,177 @@
+.hero {
+  height: 85vh;
+
+  background: url("../assets/images/banner1.png") no-repeat center;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  position: relative; /* Important */
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 700px;
+  padding: 20px;
+}
+
+/* Green Tag */
+
+.hero-tag {
+  background: #7fbf3f;
+  color: white;
+  font-weight: 500;
+
+  padding: 6px 18px;
+  border-radius: 20px;
+
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+/* Title */
+
+.hero-content h1 {
+  font-size: 46px;
+  color: #333;
+  /* text-shadow: 1px 1px 1px black; */
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+
+.hero-content h1 span {
+  color: #7fbf3f;
+ text-shadow: 1px 1px 1px #689f38;
+}
+
+/* Search Box */
+
+.hero-search {
+  display: flex;
+  background: white;
+
+  border-radius: 40px;
+  overflow: hidden;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.hero-search input {
+  flex: 1;
+  border: none;
+  padding: 15px 20px;
+  font-size: 15px;
+  outline: none;
+}
+
+.hero-search select {
+  border: none;
+  padding: 0 15px;
+  outline: none;
+  cursor: pointer;
+}
+
+.hero-search button {
+  background: #7fbf3f;
+  color: white;
+
+  border: none;
+  padding: 0 25px;
+
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.hero-search button:hover {
+  background: #689f38;
+}
+/* Left Floating Image */
+
+.hero-left-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 400px;
+  max-width: 35%;
+
+  z-index: 1;
+
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+/* Right Floating Image */
+
+.hero-right-img {
+  position: absolute;
+  top: 80px;
+  right: 0;
+
+  width: 400px;
+  max-width: 35%;
+
+  z-index: 1;
+
+  animation: floatUpDown 5s ease-in-out infinite;
+}
+/* Floating Animation */
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-25px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* Content Above Images */
+
+.hero-content {
+  position: relative;
+  z-index: 5; /* Text upar rahe */
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+  .hero {
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-search {
+    flex-direction: column;
+    border-radius: 10px;
+  }
+
+  .hero-search input,
+  .hero-search select,
+  .hero-search button {
+    width: 100%;
+    padding: 14px;
+  }
+
+  @media (max-width: 768px) {
+
+  .hero-left-img,
+  .hero-right-img {
+    display: none;
+  }
+
+}
+}

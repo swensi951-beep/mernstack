@@ -1,0 +1,60 @@
+.topbar {
+  background: #111;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+.topbar-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Left Side */
+.topbar-left {
+  display: flex;
+  gap: 25px;
+}
+
+.topbar-left span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: default;
+}
+
+/* Right Side */
+.topbar-right {
+  display: flex;
+  gap: 15px;
+}
+
+.topbar-right a {
+  color: white;
+  transition: 0.3s;
+  font-size: 20px;
+}
+
+.topbar-right a:hover {
+  color: #6fbf4a; /* Green Hover */
+}
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .topbar-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .topbar-left {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+}
