@@ -18,7 +18,7 @@ const Hero = () => {
 
         <h1>
           Organic Veggies & Foods <br />
-          You Cook <span>Healthy</span>
+          You Cook <span class="healthy-text">Healthy</span>
         </h1>
 
         <div className="hero-search">

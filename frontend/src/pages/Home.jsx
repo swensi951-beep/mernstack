@@ -3,6 +3,7 @@ import React from "react";
 import TopBar from "../components/TopBar";
 import Navbar from "../components/Navbar";
 import Hero from "../components/HeroSlider";
+import CategorySlider from "../components/CategorySlider";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <TopBar />
       <Navbar />
       <Hero />
+      <CategorySlider/>
     </>
   );
 };
