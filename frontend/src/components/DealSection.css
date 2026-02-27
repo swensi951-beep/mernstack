@@ -1,0 +1,130 @@
+/* Main Section */
+.deal-section {
+  width: 90%;
+  margin: 60px auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Card */
+.deal-card {
+  height: 260px;
+  border-radius: 10px !important;
+
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+  overflow: hidden;
+
+  cursor: pointer;
+
+  /* Load Animation */
+  animation: cardLoad 0.9s ease forwards;
+
+  transition: 0.4s;
+}
+
+/* Load Animation */
+@keyframes cardLoad {
+  0% {
+    transform: scale(0.9);
+    border-radius: 60px;
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    border-radius: 18px;
+    opacity: 1;
+  }
+}
+
+/* Zoom Layer */
+.deal-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: inherit;
+  background-size: cover;
+  background-position: center;
+
+  transform: scale(1);
+  transition: 0.5s ease;
+
+  z-index: 0;
+}
+
+/* Hover Zoom */
+.deal-card:hover::after {
+  transform: scale(1.12);
+}
+
+/* Dark Overlay (Optional) */
+.deal-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.deal-card:hover::before {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* Text Area */
+.deal-content {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+
+  transform: translateY(-50%);
+
+  color: #111;
+  text-shadow: 1px 1px 1px grey;
+
+  z-index: 2;
+  max-width: 70%;
+}
+
+/* Heading */
+.deal-content h2 {
+  font-size: 28px;
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+
+/* Button */
+.deal-content button {
+  background: transparent;
+  border: none;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  padding: 0;
+
+  transition: 0.3s;
+}
+
+.deal-content button:hover {
+  color: #7cb342;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .deal-section {
+    grid-template-columns: 1fr;
+  }
+
+  .deal-card {
+    height: 230px;
+  }
+}

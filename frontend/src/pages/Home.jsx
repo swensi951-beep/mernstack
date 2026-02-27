@@ -1,17 +1,24 @@
 import React from "react";
-
-import TopBar from "../components/TopBar";
-import Navbar from "../components/Navbar";
-import Hero from "../components/HeroSlider";
+import Hero from "../components/Hero";
 import CategorySlider from "../components/CategorySlider";
+import PromoBannerSlider from "../components/PromoBannerSlider";
+import ProductSection from "../components/ProductSection";
+import DealSection from "../components/DealSection";
+import CategorySection from "../components/CategorySection";
+
+import OrganicFeatures from "../components/OrganicFeatures";
+
 
 const Home = () => {
   return (
     <>
-      <TopBar />
-      <Navbar />
       <Hero />
       <CategorySlider/>
+      <PromoBannerSlider />
+      <ProductSection />
+      <DealSection />
+      <CategorySection />
+      <OrganicFeatures />
     </>
   );
 };

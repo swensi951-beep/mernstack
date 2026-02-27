@@ -1,0 +1,187 @@
+.fresh-produce-section {
+    display: flex;
+    padding: 80px 10%;
+    background-color: #fcfbfb;
+    gap: 0px;
+    align-items: flex-start;
+}
+
+/* Left Sidebar */
+.sidebar-content {
+    flex: 0.8;
+    background-color: #ebffd1;
+    padding: 25px 60px;
+    border-radius: 30px;
+}
+
+.farm-tag {
+    color: #78b81d;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.farm-tag span {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 800;
+    color: #222;
+    text-shadow: 1px 1px 1px grey;
+    margin: 10px 0;
+    line-height: 1;
+}
+
+.desc {
+    color: #888;
+    max-width: 300px;
+    margin-bottom: 13px;
+    font-size: 15px;
+}
+
+.category-pill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 25px;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 40px;
+    margin-bottom: 3.5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.category-pill.active {
+    border: 1.5px solid #78b81d;
+    background-color: white;
+}
+
+
+.cat-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-bg {
+    width: 42px;
+    height: 42px;
+    background: #ebffd1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-bg img {
+    width: 22px;
+}
+
+.count-circle {
+    font-size: 12px;
+    color:#888;
+    /* border: 1px solid grey; */
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+     transition: 0.3s ease;
+     border: 1px solid #888;
+}
+.category-pill .count-circle:hover {
+  border-color: #78b81d;
+}
+/* Right Grid Area */
+.product-showcase {
+    flex: 2;
+    background: #fff;
+    border: 1px solid #78b81d;
+    border-radius: 25px;
+    padding: 70px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.product-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-img-wrap {
+  background: #ebffd1;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease; /* smooth */
+}
+
+.product-img-wrap img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+
+  transition: all 0.3s ease; /* smooth */
+}
+
+/* Hover Effect */
+.product-img-wrap:hover {
+
+  box-shadow: 0 0 20px rgba(120, 184, 29, 0.6);
+  transform: translateY(-5px); /* thoda lift */
+}
+
+.product-img-wrap:hover img {
+  transform: scale(1.15); /* zoom */
+  filter: brightness(1.1);
+}
+.meats-tag {
+    background: #f0f9e8;
+    color: #78b81d;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 13px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+
+.rating {
+    color: #ffc107;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.rating span {
+    color:grey;
+    font-size: 16px;
+}
+
+.p-name {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+.price-container .new-price {
+    color: #78b81d;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.price-container .old-price {
+    color: grey;
+    text-decoration: line-through;
+    margin-left: 8px;
+    font-size: 16px;
+}

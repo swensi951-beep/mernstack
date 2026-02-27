@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // 👈 ADD THIS
+
 import {
   FaSearch,
   FaUser,
@@ -9,7 +11,7 @@ import {
 } from "react-icons/fa";
 
 import "./Navbar.css";
-import logo from "../assets/images/logo.png"; // apna logo yaha rakho
+import logo from "../assets/images/logo.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,17 +23,38 @@ const Navbar = () => {
 
         {/* Logo */}
         <div className="nav-logo">
-          <img src={logo} alt="Organi" />
+          <Link to="/">
+            <img src={logo} alt="Organi" />
+          </Link>
         </div>
 
         {/* Menu */}
         <ul className={menuOpen ? "nav-menu active" : "nav-menu"}>
-          <li><a href="/">Home</a></li>
-          <li><a href="/shop">Shop</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/portfolio">Portfolio</a></li>
-          <li><a href="/pages">Pages</a></li>
-          <li><a href="/contact">Contacts</a></li>
+
+          <li>
+            <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+          </li>
+
+          <li>
+            <Link to="/shop" onClick={() => setMenuOpen(false)}>Shop</Link>
+          </li>
+
+          <li>
+            <Link to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
+          </li>
+
+          <li>
+            <Link to="/portfolio" onClick={() => setMenuOpen(false)}>Portfolio</Link>
+          </li>
+
+          <li>
+            <Link to="/pages" onClick={() => setMenuOpen(false)}>Pages</Link>
+          </li>
+
+          <li>
+            <Link to="/contact" onClick={() => setMenuOpen(false)}>Contacts</Link>
+          </li>
+
         </ul>
 
         {/* Icons */}

@@ -1,22 +1,26 @@
-import CategorySlider from "./components/CategorySlider";
-import Hero from "./components/Hero";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
-import ProductSection from "./components/ProductSection";
-import PromoBannerSlider from "./components/PromoBannerSlider";
 import TopBar from "./components/TopBar";
 
+import Home from "./pages/Home";
+import Shop from "./pages/Shop";
+
+import Contact from "./pages/Contact";
 
 function App() {
   return (
     <>
       <TopBar />
-      <Navbar/>
-     <Hero/>
-     <CategorySlider />
-    <PromoBannerSlider />
-    <ProductSection />
+      <Navbar />  
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
    
-      {/* Baaki components niche */}
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </>
   );
 }
