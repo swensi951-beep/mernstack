@@ -7,6 +7,16 @@ import DealSection from "../components/DealSection";
 import CategorySection from "../components/CategorySection";
 
 import OrganicFeatures from "../components/OrganicFeatures";
+import DiscountSection from "../components/DiscountSection";
+import OrganicProtein from "../components/OrganicProtein";
+import WeeklyDeals from "../components/WeeklyDeals";
+import DeliveryBanner from "../components/DeliveryBanner";
+import TestimonialSlider from "../components/TestimonialSlider";
+import TeamSection from "../components/TeamSection";
+import OrganicProducts from "../components/OrganicProducts";
+import FeaturesAndInsta from "../components/FeaturesAndInsta";
+
+
 
 
 const Home = () => {
@@ -19,6 +29,14 @@ const Home = () => {
       <DealSection />
       <CategorySection />
       <OrganicFeatures />
+      <DiscountSection />
+      <OrganicProtein />
+      <WeeklyDeals />
+      <DeliveryBanner />
+      <TestimonialSlider />
+      <TeamSection />
+      <OrganicProducts />
+      <FeaturesAndInsta />
     </>
   );
 };

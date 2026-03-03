@@ -1,0 +1,97 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap'); */
+
+.banner-wrapper {
+    padding: 40px 8%;
+    display: flex;
+    justify-content: center;
+}
+
+.delivery-banner {
+    width: 100%;
+    /* max-width: 1500px; */
+    height: 120px; /* Slim banner height */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px; /* Smooth rounded corners */
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background image ko thoda sa saaf dikhane ke liye halka overlay agar zarurat ho */
+.delivery-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1); /* Very light white tint */
+    z-index: 1;
+}
+
+.banner-content {
+    width: 100%;
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between; /* Text left, Button right */
+    align-items: center;
+    position: relative;
+    z-index: 2; /* Overlay ke upar content */
+    font-family: 'Quicksand', sans-serif;
+}
+
+.banner-text {
+    font-size: 24px;
+    color: #333;
+    font-weight: 500;
+    margin: 0;
+}
+
+.banner-text strong {
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.shop-now-btn {
+    background-color: #78b81d; /* Signature Green */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.shop-now-btn span {
+    font-size: 20px;
+}
+
+.shop-now-btn:hover {
+    background-color: #1a1a1a; /* Dark gray/black on hover */
+    transform: translateX(5px); /* Chhota sa animation */
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .delivery-banner {
+        height: auto;
+        padding: 30px 20px;
+    }
+    .banner-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 0 20px;
+    }
+    .banner-text {
+        font-size: 18px;
+    }
+}

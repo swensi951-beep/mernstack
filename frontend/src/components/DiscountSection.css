@@ -1,0 +1,281 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&family=Lora:wght@700&display=swap'); */
+
+.discount-section {
+      padding: 80px 10%;
+      background: #fff;
+     
+}
+
+.discount-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 50px;
+}
+
+.farm-tag {
+      color: #78b81d;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+}
+
+.section-title {
+      font-family: 'Lora', serif;
+      font-size: 40px;
+      margin-top: 5px;
+}
+
+/* Timer Circles */
+.countdown-wrapper {
+      display: flex;
+      gap: 20px;
+}
+
+.timer-circle-unit {
+      text-align: center;
+}
+
+.circle-num {
+      width: 55px;
+      height: 55px;
+      background: #f4f4f4;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 8px;
+      transition: 0.3s;
+}
+
+.unit-label {
+      font-size: 12px;
+      color: #999;
+      font-weight: 700;
+      letter-spacing: 1px;
+}
+
+.timer-circle-unit:hover .circle-num {
+      background: #78b81d;
+      color: #fff;
+}
+
+/* Grid and Cards */
+.discount-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+}
+
+.organic-card {
+      border: 1px solid #78b81d;
+      border-radius: 40px;
+      padding: 30px;
+      position: relative;
+      background: #fff;
+      transition: all 0.4s ease;
+}
+
+/* Screenshot Hover Effect: Border Green */
+.organic-card:hover {
+      border-color: #78b81d;
+      box-shadow: 0 15px 40px rgba(120, 184, 29, 0.08);
+}
+
+.card-labels {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+
+.category-tag {
+      background: #f0f9e8;
+      color: #78b81d;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 6px;
+      letter-spacing: 1px;
+}
+
+.discount-circle {
+      background: #ff5e14;
+      color: #fff;
+      font-size: 14px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+}
+
+.img-holder {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin: 25px 0;
+}
+
+.prod-img {
+      max-width: 90%;
+      max-height: 150px;
+      transition: 0.5s;
+}
+
+/* Hover Actions (Search & Bag) */
+.hover-actions {
+      position: absolute;
+      display: flex;
+      gap: 12px;
+      opacity: 0;
+      transition: 0.4s;
+      transform: translateY(20px);
+}
+
+.organic-card:hover .hover-actions {
+      opacity: 1;
+      transform: translateY(0);
+}
+
+.action-btn {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: #fff;
+      border: none;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      transition: 0.3s;
+}
+
+.action-btn:hover {
+      background: #78b81d;
+      color: #fff;
+}
+
+.organic-card:hover .prod-img {
+      transform: scale(1.1) rotate(2deg);
+}
+
+.card-body .stars {
+      color: #ffc107;
+      font-size: 15px;
+      margin-bottom: 5px;
+}
+
+.rating-num {
+      color: #ccc;
+      margin-left: 5px;
+}
+
+.prod-title {
+      font-size: 21px;
+      font-weight: 700;
+      margin: 5px 0;
+      color: #1a1a1a;
+}
+
+.current-price {
+      color: #78b81d;
+      font-weight: 800;
+      font-size: 19px;
+}
+
+.old-price {
+      color: #ddd;
+      text-decoration: line-through;
+      margin-left: 10px;
+      font-size: 16px;
+}
+/* ... (Baki purani CSS same rahegi, niche wale changes add karein) ... */
+
+.img-holder {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+/* Image Swap Logic */
+.prod-img {
+    max-width: 90%;
+    max-height: 180px;
+    object-fit: contain;
+    position: absolute;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-img {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+}
+
+.main-img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Hover State */
+.organic-card:hover .main-img {
+    opacity: 0;
+    transform: scale(1.2); /* Purani image halki zoom hoke gayab hogi */
+}
+
+.organic-card:hover .hover-img {
+    opacity: 1;
+    transform: scale(1) translateY(0); /* Nayi image upar aayegi */
+}
+
+/* Icons Hover Effect */
+.hover-actions {
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    gap: 15px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.4s ease-in-out;
+}
+
+.organic-card:hover .hover-actions {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.action-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #fff;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.action-btn:hover {
+    background: #78b81d;
+    color: #fff;
+}
+
+/* Card Border hover */
+.organic-card:hover {
+    border-color: #78b81d;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
