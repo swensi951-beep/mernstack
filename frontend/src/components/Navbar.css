@@ -1,139 +1,122 @@
-.navbar {
-  background: white;
-  padding: 15px 0;
-  border-bottom: 1px solid #eee;
-}
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-.nav-container {
+.navbar{
   width: 90%;
-  max-width: 1200px;
   margin: auto;
+  padding: 10px 0;
 
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+
+  font-family: "Poppins", sans-serif;
+  border-bottom: 1px solid #eee;
 }
 
 /* Logo */
 
-.nav-logo img {
-  height: 45px;
+.logo{
+  font-size: 26px;
+  font-weight: 600;
+  color: #333;
 }
 
-/* Menu */
+.logo span{
+  color: #4CAF50;
+}
 
-.nav-menu {
-  list-style: none;
+/* Nav Links */
+
+.nav-links{
   display: flex;
+  list-style: none;
   gap: 30px;
 }
 
-.nav-menu li a {
+.nav-links a{
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.nav-menu li a:hover {
-  color: #7fbf3f;
-}
-
-/* Icons */
-
-.nav-icons {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  /* font-size: 30px; */
-}
-
-.icon-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid #7fbf3f;
-  cursor: pointer;
-  background-color: white;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transition: 0.3s;
+  color: #444;
   font-size: 15px;
-}
-
-.icon-btn:hover {
-  background: #7fbf3f;
-  color: white;
-}
-
-/* Cart Badge */
-
-.cart-btn {
+  font-weight: 500;
   position: relative;
-  background: #7fbf3f;
-  color: white;
+  transition: 0.3s;
 }
 
-.cart-count {
+/* hover underline effect */
+
+.nav-links a::after{
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #4CAF50;
   position: absolute;
-  top: -5px;
-  right: -5px;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
 
-  background: black;
-  color: white;
+.nav-links a:hover::after{
+  width: 100%;
+}
 
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
+/* Right side */
 
-  font-size: 11px;
-
+.nav-right{
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 20px;
 }
 
-/* Mobile Menu Button */
+/* Login button */
 
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
+.login-btn{
+  background: #4CAF50;
+  color: white;
+  padding: 7px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.login-btn:hover{
+  background: #3e8e41;
+}
+
+/* Cart icon */
+
+.cart-icon{
+  font-size: 24px;
+  color: #4CAF50;
+  transition: 0.3s;
+}
+
+.cart-icon:hover{
+  color: #4CAF50;
+  transform: scale(1.1);
+}
+/* Wishlist */
+
+.wishlist-icon{
   font-size: 22px;
-  cursor: pointer;
+  color: #4CAF50;
+  transition: 0.3s;
 }
 
-/* Responsive */
+.wishlist-icon:hover{
+  transform: scale(1.1);
+  color: #2e7d32;
+}
 
-@media (max-width: 900px) {
+/* Cart */
 
-  .nav-menu {
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    z-index: 1;
+.cart-icon{
+  font-size: 24px;
+  color:#4CAF50;
+  transition: 0.3s;
+}
 
-    background: white;
-
-    flex-direction: column;
-    align-items: center;
-
-    gap: 20px;
-    padding: 30px 0;
-
-    display: none;
-  }
-
-  .nav-menu.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
+.cart-icon:hover{
+  color: #2e7d32;
 }

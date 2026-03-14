@@ -1,0 +1,138 @@
+/* Font Import at the top */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.blog-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+    /* Font family added here */
+    font-family: 'Poppins', sans-serif;
+}
+
+.blog-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.blog-header .subtitle {
+    color: #4caf4f;
+    background-color: #4caf4f1f;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 700; /* Bold Poppins */
+    text-transform: capitalize;
+    word-spacing: 2px;
+    font-size: 12px;
+    /* letter-spacing: 2px; */
+}
+
+.blog-header h2 {
+    font-size: 32px;
+    color: #1b2e1d;
+    margin: 10px 0;
+    font-weight: 700; /* Extra Bold Poppins for Heading */
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+/* Blog Card Styling */
+.blog-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(76, 175, 80, 0.12);
+}
+
+.blog-img {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.blog-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.blog-card:hover .blog-img img {
+    transform: scale(1.1);
+}
+
+.blog-date {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: #4caf50;
+    color: white;
+    padding: 6px 18px;
+    border-radius:5px;
+    font-size: 12px;
+    font-weight: 500; /* Medium Poppins */
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+}
+
+/* Blog Content */
+.blog-info {
+    padding: 25px;
+}
+
+.blog-meta {
+    margin-bottom: 10px;
+    color: #888;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.blog-info h3 {
+    font-size: 22px;
+    color: #1b2e1d;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    font-weight: 600; /* Semi-Bold Poppins */
+    transition: color 0.3s ease;
+}
+
+.blog-card:hover h3 {
+    color: #4caf50;
+}
+
+.blog-info p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-weight: 400; /* Regular Poppins */
+}
+
+.read-more-btn {
+    background: transparent;
+    border: none;
+    color: #1b2e1d;
+    font-weight: 700; /* Bold Poppins */
+    font-family: 'Poppins', sans-serif; /* Explicit font for button */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+    color: #4caf50;
+    gap: 12px;
+}

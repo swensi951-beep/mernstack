@@ -1,45 +1,25 @@
-import React from "react";
-import "./Hero.css";
+import React from 'react';
+import './Hero.css'; // Make sure the path to your CSS file is correct
+import shape5 from "../assets/images/Hero/shape5.png";
 
-import leftImg from "../assets/images/banner4.png";
-import rightImg from "../assets/images/banner3.png";
-
-const Hero = () => {
+const HeroBanner = () => {
   return (
-    <section className="hero">
-
-      {/* Floating Images */}
-      <img src={leftImg} className="hero-left-img" alt="" />
-      <img src={rightImg} className="hero-right-img" alt="" />
-
+    <section className="hero-container">
       <div className="hero-content">
-
-        <span className="hero-tag">100% ORGANIC FOODS</span>
-
-        <h1>
-          Organic Veggies & Foods <br />
-          You Cook <span class="healthy-text">Healthy</span>
-        </h1>
-
-        <div className="hero-search">
-
-          <input type="text" placeholder="Search Product" />
-
-          <select>
-            <option>Cauliflower</option>
-            <option>Tomato</option>
-            <option>Apple</option>
-            <option>Potato</option>
-          </select>
-
-          <button>Search</button>
-
-        </div>
+       <h1>Fresh Products Direct From <span className="gradient-text">Farmers</span></h1>
+        <p>Buy fruits, vegetables and grains directly from farmers</p>
+        <button type="button">Shop Now  <i className="fa-solid fa-arrow-right arrow-icon"></i></button>
+        <button type="button" className='btn1' >View More <i className="fa-solid fa-arrow-right arrow-icon"></i></button>
 
       </div>
 
+      <img 
+        src={shape5} 
+        alt="Fresh Produce" 
+        className="hero-shape-img" 
+      />
     </section>
   );
 };
 
-export default Hero;
+export default HeroBanner;

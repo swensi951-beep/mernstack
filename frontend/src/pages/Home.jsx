@@ -1,42 +1,27 @@
 import React from "react";
+
 import Hero from "../components/Hero";
-import CategorySlider from "../components/CategorySlider";
-import PromoBannerSlider from "../components/PromoBannerSlider";
-import ProductSection from "../components/ProductSection";
-import DealSection from "../components/DealSection";
-import CategorySection from "../components/CategorySection";
-
-import OrganicFeatures from "../components/OrganicFeatures";
-import DiscountSection from "../components/DiscountSection";
-import OrganicProtein from "../components/OrganicProtein";
-import WeeklyDeals from "../components/WeeklyDeals";
-import DeliveryBanner from "../components/DeliveryBanner";
-import TestimonialSlider from "../components/TestimonialSlider";
-import TeamSection from "../components/TeamSection";
-import OrganicProducts from "../components/OrganicProducts";
-import FeaturesAndInsta from "../components/FeaturesAndInsta";
-
+import About_Section from "../components/About_Section";
+import ProductList from "../components/ProductList";
+import BlogSection from "../components/BlogSection";
+import ReviewSection from "../components/ReviewSection";
+import Footer from "../components/Footer";
+import ContactSection from "../components/ContactSection";
+import Navbar from "../components/Navbar";
 
 
 
 const Home = () => {
   return (
     <>
-      <Hero />
-      <CategorySlider/>
-      <PromoBannerSlider />
-      <ProductSection />
-      <DealSection />
-      <CategorySection />
-      <OrganicFeatures />
-      <DiscountSection />
-      <OrganicProtein />
-      <WeeklyDeals />
-      <DeliveryBanner />
-      <TestimonialSlider />
-      <TeamSection />
-      <OrganicProducts />
-      <FeaturesAndInsta />
+    <Navbar />
+     <Hero />
+     <About_Section/>
+     <ProductList />
+     <BlogSection />
+      <ReviewSection />
+      <ContactSection />
+     <Footer />
     </>
   );
 };

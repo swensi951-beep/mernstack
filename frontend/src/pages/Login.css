@@ -1,0 +1,221 @@
+.auth-wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: #f4f7f5; Light muted background */
+  padding: 20px;
+}
+
+.auth-inner {
+  display: flex;
+  width: 1000px;
+  height: 600px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  border: 1px dotted green;
+
+}
+
+/* Info Section Styling */
+.auth-info-section {
+  flex: 1;
+  position: relative;
+}
+
+.auth-overlay {
+  position: absolute;
+  inset: 0;
+  /* background: rgba(124, 135, 127, 0.85); Muted Green Overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  color: white;
+  padding: 30px 50px;
+  text-align: center;
+  font-family: poppins;
+}
+
+.gold-text { color: green; text-shadow: 1px 1px 1px black;}
+
+/* Form Section Styling */
+.auth-form-section {
+  flex: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.form-content { width: 100%; max-width: 350px; }
+
+.form-content h2 { font-size: 2rem; color: #333; margin-bottom: 5px;font-family: poppins; }
+.subtitle { color: green; margin-bottom: 30px; font-size: 0.9rem; font-family: poppins; }
+
+.input-field {
+  position: relative;
+  margin-bottom: 20px;
+  /* border: 1px solid green; */
+}
+
+.form-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: green;
+  
+}
+
+.input-field input {
+  width: 100%;
+  padding: 12px 15px 12px 45px;
+  border: 1px solid green;
+  border-radius: 10px;
+  background: #f9f9f9;
+  outline: none;
+  transition: 0.3s;
+  font-family: poppins;
+  color: green;
+}
+
+.input-field input:focus {
+  border-color: #222;
+  background: #fff;
+}
+
+.forgot-btn {
+  display: block;
+  text-align: right;
+  font-size: 0.85rem;
+  color: green;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.main-auth-btn {
+  width: 100%;
+  padding: 14px;
+  background: green; /* Gold Button */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.main-auth-btn:hover {
+  background: rgb(3, 188, 3); /* Muted Green on hover */
+  transform: translateY(-3px);
+}
+
+.switch-text {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-family: poppins;
+}
+
+.switch-text span {
+  color: green;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .auth-info-section { display: none; }
+  .auth-inner { width: 100%; height: auto; padding: 20px; }
+}
+/* Floating Back Link */
+.back-home-link {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  text-decoration: none;
+  color: #7C877F;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.back-home-link:hover {
+  color: green;
+  transform: translateX(-5px);
+}
+
+.auth-logo-link {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s;
+}
+
+.auth-logo-link:hover {
+  transform: scale(1.05);
+}
+
+/* Side Image Adjustments */
+.auth-info-section {
+  flex: 1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Form Options (Remember Me & Forgot Pass) */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 0.85rem;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #222;
+  cursor: pointer;
+  font-family: poppins;
+}
+
+.forgot-btn {
+  color: green;
+  text-decoration: none;
+  transition: 0.3s;
+  font-family: poppins;
+
+}
+
+.forgot-btn:hover {
+  text-decoration: underline;
+}
+
+/* Improved Input focus */
+.input-field input:focus {
+  border-color: green;
+  box-shadow: 0 0 0 4px rgba(193, 157, 104, 0.1);
+}
+
+/* Button Animation */
+.main-auth-btn {
+  box-shadow: 0 4px 15px rgba(0, 128, 0, 0.718);
+}
+
+/* Responsive Fix */
+@media (max-width: 992px) {
+  .auth-inner {
+    width: 90%;
+    height: auto;
+    min-height: 550px;
+  }
+}

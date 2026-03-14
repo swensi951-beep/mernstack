@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.shop-product-area {
+    padding: 70px 0;
+    background-color: #f7faf7bc; /* Very light green tint */
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.product-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* Card Styling */
+.single-product-item {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid #4caf50;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.single-product-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(76, 175, 80, 0.15); /* Greenish shadow */
+    border-color: #4caf50;
+}
+
+/* Image Thumb */
+.product-thumb {
+    background-color: #f1f8f1; /* Light Green background */
+    height: 250px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-thumb img {
+    max-width: 70%;
+    transition: transform 0.6s ease;
+}
+
+.single-product-item:hover .product-thumb img {
+    transform: scale(1.1);
+}
+
+/* Action Buttons Overlay */
+.product-action-links {
+    position: absolute;
+    top: 15px;
+    right: -50px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: 0.4s;
+}
+
+.single-product-item:hover .product-action-links {
+    right: 15px;
+}
+
+.wishlist-btn, .quick-view-btn {
+    width: 38px;
+    height: 38px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4caf50;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Heart Button Red on Hover */
+.wishlist-btn:hover { 
+    background: #ff4d4d; 
+    color: white !important; 
+}
+
+/* Content Section */
+.product-content {
+    padding: 15px 5px 5px;
+}
+
+/* Capsule Category Tag */
+.category-tag {
+    font-size: 10px;
+    color:#4caf50;
+    background: #e8f0e9; /* Green Capsule */
+    padding: 4px 12px;
+    border-radius: 50px; /* Makes it capsule */
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+.product-title {
+    font-size: 1.15rem;
+    color: #1b2e1d;
+    margin: 10px 0 15px;
+    font-weight: 600;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-tag {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2e7d32; /* Deep Green Price */
+}
+
+/* Green Gradient Button */
+.add-cart-gradient-btn {
+    background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-cart-gradient-btn:hover {
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.3);
+    transform: scale(1.05);
+}
+/* --- Updated Action Buttons Section --- */
+.product-action-links {
+    position: absolute;
+    top: 20px;
+    right: 15px; /* Side se align rahega */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    opacity: 0; /* Shuru mein hidden */
+    transform: translateX(20px); /* Right side se slide hoke aayega */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 10;
+}
+
+.single-product-item:hover .product-action-links {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.wishlist-btn, .quick-view-btn {
+    width: 42px;
+    height: 42px;
+    background: #ffffff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4caf50;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    font-size: 18px;
+}
+
+/* Quick View Hover - Modern Green */
+.quick-view-btn:hover {
+    background: #4caf50;
+    color: #ffffff !important;
+    transform: rotate(360deg); /* Modern spin effect */
+}
+
+/* Heart Button - Professional Red Pulse */
+.wishlist-btn:hover { 
+    background: #ff4d4d; 
+    color: white !important;
+    animation: heartBeat 0.8s infinite;
+}
+
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+/* --- Updated Cart Button Section --- */
+.add-cart-gradient-btn {
+    background: #4caf50; /* Solid organic green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px; /* Fully rounded Pill shape */
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.add-cart-gradient-btn:hover {
+    background: transparent;
+    color: #4caf50;
+    border-color: #4caf50;
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.2);
+}
+
+/* Cart Icon bounce effect on hover */
+.add-cart-gradient-btn:hover svg, 
+.add-cart-gradient-btn:hover i {
+    animation: bounce 0.5s ease infinite alternate;
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-3px); }
+}
+/* --- New Features Styling --- */
+
+/* Sale Badge */
+.sale-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ff4d4d;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 5px;
+    z-index: 5;
+    box-shadow: 0 4px 8px rgba(255, 77, 77, 0.3);
+}
+
+/* Stock Tags */
+.low-stock-tag {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 165, 0, 0.9);
+    color: white;
+    font-size: 10px;
+    padding: 2px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.out-of-stock {
+    opacity: 0.7;
+    filter: grayscale(0.5);
+}
+
+.out-of-stock .add-cart-gradient-btn {
+    background: #999 !important;
+    cursor: not-allowed;
+}
+
+/* Price Layout Update */
+.price-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.old-price {
+    font-size: 12px;
+    color: #999;
+    text-decoration: line-through;
+    margin-top: -5px;
+}
+
+/* Dynamic Category Colors */
+.cat-vegetables { background: #e8f0e9; color: #4caf50; }
+.cat-spices { background: #fff3e0; color: #ff9800; }
+.cat-tubers { background: #f3e5f5; color: #9c27b0; }
+
+/* Existing Transitions Fixes */
+.single-product-item {
+    cursor: pointer;
+}
+
+/* Image Hover Zoom Smoothness */
+.product-thumb img {
+    will-change: transform;
+}
+/* --- Filter Bar Styling --- */
+.filter-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 50px;
+    background: #ffffff;
+    padding: 15px 25px;
+    border-radius: 50px;
+    border: 1px solid #e8f0e9;
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.05);
+}
+
+.filter-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: #2e7d32;
+    font-size: 14px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    border-radius: 30px;
+    border: 1px solid #4caf50;
+    background: transparent;
+    color: #4caf50;
+    font-weight: 500;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: #4caf50;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+}
+
+/* Smooth Entrance for products */
+.product-grid-layout {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

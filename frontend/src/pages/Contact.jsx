@@ -1,5 +1,18 @@
+import ContactHeader from "../components/ContactHeader";
+import ContactSection from "../components/ContactSection";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+
+
 const Contact = () => {
-  return <h1>Contact Page</h1>;
+  return (
+    <>
+    <Navbar />
+    <ContactHeader />
+    <ContactSection />
+    <Footer />
+    </>
+  )
 };
 
 export default Contact
