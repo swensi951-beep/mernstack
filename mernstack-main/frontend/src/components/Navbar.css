@@ -1,0 +1,149 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.navbar{
+  width: 90%;
+  margin: auto;
+  padding: 10px 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: "Poppins", sans-serif;
+  border-bottom: 1px solid #eee;
+}
+
+/* Logo */
+
+.logo{
+  font-size: 26px;
+  font-weight: 600;
+  color: #333;
+}
+
+.logo span{
+  color: #4CAF50;
+}
+
+/* Nav Links */
+
+.nav-links{
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: #444;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* hover underline effect */
+
+.nav-links a::after{
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #4CAF50;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after{
+  width: 100%;
+}
+
+/* Right side */
+
+.nav-right{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Login button */
+
+.login-btn{
+  background: #4CAF50;
+  color: white;
+  padding: 7px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.login-btn:hover{
+  background: #3e8e41;
+}
+
+/* Cart icon */
+
+.cart-icon{
+  font-size: 24px;
+  color: #4CAF50;
+  transition: 0.3s;
+}
+
+.cart-icon:hover{
+  color: #4CAF50;
+  transform: scale(1.1);
+}
+/* Wishlist */
+
+.wishlist-icon{
+  font-size: 22px;
+  color: #4CAF50;
+  transition: 0.3s;
+}
+
+.wishlist-icon:hover{
+  transform: scale(1.1);
+  color: #2e7d32;
+}
+
+/* Cart */
+
+.cart-icon{
+  font-size: 29px;
+  color:#4CAF50;
+  transition: 0.3s;
+}
+
+.cart-icon:hover{
+  color: #2e7d32;
+}
+/* Cart Badge Styling */
+.cart-icon-wrapper {
+  color: #4CAF50; /* या आपका मनपसंद कलर */
+  transition: transform 0.2s ease;
+}
+
+.cart-icon-wrapper:hover {
+  transform: scale(1.1);
+}
+
+.navbar-cart-badge {
+  position: absolute;
+  top: -15px;
+  right: px;
+  background: #ef4444; /* गहरा लाल रंग */
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}

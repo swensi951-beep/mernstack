@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --farm-green:rgb(4, 159, 4);
+  --deep-organic: #1b5e20;
+  --soft-white: #fdfdfd;
+  --slate-grey: #64748b;
+  --ink-black: #111827;
+}
+
+.auth-ultra-wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f9; /* Soft greyish-blue background for full page */
+  font-family: 'Poppins', sans-serif;
+  padding: 30px;
+}
+
+.auth-creative-container {
+  display: flex;
+  width: 100%;
+  max-width: 1300px;
+  height:700px; /* Increased Height for better space */
+  background: #ffffff;
+  border-radius: 10px; /* Ultra-rounded corners */
+  box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* ⭐ Left Pure Image Side */
+.auth-pure-image-side {
+  flex: 1.3; /* Image gets slightly more space */
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Image fits perfectly without stretching */
+  transition: transform 10s ease-out;
+}
+
+/* Optional subtly zoom effect on hover */
+.auth-creative-container:hover .auth-bg-img {
+  transform: scale(1.05);
+}
+
+/* ⭐ Right Creative Form Side */
+.auth-modern-form-side {
+  flex: 1;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px; /* Generous padding */
+  position: relative;
+}
+
+/* Content Box inside Form Side */
+.form-content-box {
+  width: 100%;
+  max-width: 380px;
+}
+
+/* Minimalist Logo */
+.brand-minimal {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 26px;
+  /* font-weight: 800; */
+  /* color:; */
+  margin-bottom: 50px; /* Space before header */
+}
+
+.brand-minimal i {
+  color: var(--farm-green);
+  font-size: 28px;
+  color: green;
+}
+
+.brand-minimal span { color: var(--slate-grey); font-weight: 500;}
+
+/* Form Header styling with entrance animation */
+.form-header-creative h2 {
+  font-size: 32px;
+  color: var(--ink-black);
+  font-weight: 700;
+  margin-bottom: 8px;
+  animation: fadeInUp 0.5s ease;
+}
+
+.form-header-creative p {
+  color: #222;
+  font-size: 15px;
+  margin-bottom: 45px; /* Space before inputs */
+  animation: fadeInUp 0.6s ease;
+}
+
+/* Creative Form Styling */
+.creative-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Spacious gap between inputs */
+}
+
+/* Custom Input Block with Floating Feel */
+.input-block {
+  position: relative;
+}
+
+.input-block input {
+  width: 100%;
+  padding: 16px 20px 16px 55px; /* Generous space for icons and text */
+  background: #f8fafc;
+  border: 1.5px solid #1b5e20;
+  border-radius: 18px; /* Extra rounded inputs */
+  font-size: 16px;
+  color: var(--ink-black);
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.input-block input:focus {
+  border-color: var(--farm-green);
+  background: white;
+  box-shadow: 0 10px 20px rgba(46, 204, 113, 0.1); /* Subtle green shadow on focus */
+}
+
+/* Icon placement inside input */
+.input-block .input-icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #1b5e20;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+/* Icon color change on input focus */
+.input-block input:focus + .input-icon {
+  color: var(--farm-green);
+}
+
+/* Form Actions (Remember Me / Forgot Password) */
+.form-actions-minimal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-top: -5px; /* Move up slightly */
+}
+
+.checkbox-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--slate-grey);
+  cursor: pointer;
+}
+
+.checkbox-wrap input {
+  accent-color: var(--farm-green); /* Custom green checkbox */
+  width: 16px; height: 16px;
+}
+
+.forgot-p-link {
+  color: var(--farm-green);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.forgot-p-link:hover {
+  color: var(--deep-organic);
+}
+
+/* ⭐ The Creative Pulse Button */
+.creative-btn {
+  background: linear-gradient(135deg, var(--deep-organic) 0%, var(--farm-green) 100%);
+  color: white;
+  padding: 16px;
+  border: none;
+  border-radius: 20px; /* Extra rounded button */
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space out text and icon */
+  gap: 12px;
+  transition: all 0.4s ease;
+  margin-top: 15px;
+  box-shadow: 0 15px 30px rgba(46, 204, 113, 0.2);
+}
+
+.creative-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(46, 204, 113, 0.3);
+  background: linear-gradient(135deg, var(--farm-green) 0%, var(--deep-organic) 100%); /* Reverse gradient */
+}
+
+.btn-icon-wrap {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon-wrap i {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.creative-btn:hover i {
+  transform: translateX(5px); /* Arrow moves slightly on hover */
+}
+
+/* Form Footer with Link */
+.form-switcher-footer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 15px;
+  color: var(--slate-grey);
+}
+
+.switch-link {
+  color: var(--farm-green);
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.switch-link:hover {
+  color: var(--deep-organic);
+  text-decoration: underline;
+}
+
+/* Small Animation Keyframes */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive: Hide Image Side on smaller screens */
+@media (max-width: 950px) {
+  .auth-pure-image-side { display: none; }
+  .auth-creative-container { max-width: 480px; min-height: 650px; }
+  .auth-modern-form-side { padding: 40px; }
+}

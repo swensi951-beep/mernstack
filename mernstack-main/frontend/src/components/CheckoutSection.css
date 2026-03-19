@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary-green: #22c55e;
+  --dark-green: #14532d;
+  --soft-green: #f0fdf4;
+  --border-color: #e2e8f0;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --white: #ffffff;
+  --shadow-sm: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
+}
+
+.checkout-page {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+/* --- Navigation & Breadcrumbs --- */
+.checkout-nav {
+  margin-bottom: 30px;
+  padding: 10px 0;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-content span {
+  transition: all 0.3s ease;
+}
+
+.nav-content span:hover {
+  color: var(--primary-green);
+}
+
+.nav-content .current {
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+/* --- Layout Grid --- */
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  gap: 40px;
+  align-items: start;
+}
+
+/* --- Left Side Cards --- */
+.checkout-card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 32px;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.checkout-card:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.card-header h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.text-green {
+  color: var(--primary-green);
+  filter: drop-shadow(0 4px 6px rgba(34, 197, 94, 0.2));
+}
+
+/* --- Form Inputs --- */
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.col-span-2 {
+  grid-column: span 2;
+}
+
+.input-grid input {
+  width: 100%;
+  padding: 16px 20px;
+  border: 1.5px solid var(--border-color);
+  border-radius: 16px;
+  font-size: 15px;
+  background: #f8fafc;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--text-main);
+}
+
+.input-grid input:focus {
+  outline: none;
+  border-color: var(--primary-green);
+  background: white;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.1);
+  transform: translateY(-2px);
+}
+
+/* --- Payment Option --- */
+.payment-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  background: var(--soft-green);
+  border: 2px solid var(--primary-green);
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.payment-info {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.payment-info strong {
+  display: block;
+  font-size: 16px;
+  color: var(--dark-green);
+}
+
+.payment-info p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 4px 0 0 0;
+}
+
+.radio-circle {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--primary-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio-circle.active::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: var(--primary-green);
+  border-radius: 50%;
+  animation: scaleUp 0.3s ease;
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+
+/* --- Checkout Button --- */
+.place-order-button {
+  width: 100%;
+  padding: 22px;
+  background: var(--dark-green);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.place-order-button:hover:not(:disabled) {
+  background: #15803d;
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(21, 128, 61, 0.25);
+}
+
+.place-order-button:active {
+  transform: scale(0.98);
+}
+
+.place-order-button:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* --- Right Side Summary (Sticky) --- */
+.summary-sticky {
+  position: sticky;
+  top: 40px;
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
+  padding: 32px;
+  box-shadow: var(--shadow-lg);
+}
+
+.summary-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1.5px dashed var(--border-color);
+}
+
+.summary-header h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.summary-items {
+  max-height: 350px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* Custom Scrollbar */
+.summary-items::-webkit-scrollbar {
+  width: 4px;
+}
+.summary-items::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 10px;
+}
+
+.summary-product {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding: 8px;
+  border-radius: 16px;
+  transition: background 0.3s ease;
+}
+
+.summary-product:hover {
+  background: #f8fafc;
+}
+
+.product-img {
+  width: 70px;
+  height: 70px;
+  background: #f1f5f9;
+  border-radius: 14px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.qty-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: var(--dark-green);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+.p-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0 0 4px 0;
+}
+
+.p-price {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary-green);
+  margin: 0;
+}
+
+/* --- Totals Section --- */
+.summary-totals {
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: 1.5px solid #f1f5f9;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  color: var(--text-muted);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.free-text {
+  color: var(--primary-green);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.grand-total {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid var(--text-main);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.secure-footer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 1024px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .checkout-right {
+    order: -1; /* Summary mobile में ऊपर दिखेगी */
+  }
+
+  .summary-sticky {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .input-grid {
+    grid-template-columns: 1fr;
+  }
+  .col-span-2 {
+    grid-column: span 1;
+  }
+  .checkout-card {
+    padding: 20px;
+  }
+}

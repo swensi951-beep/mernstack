@@ -1,0 +1,143 @@
+/* Color Palette: #7C877F (Green), #c19d68 (Gold) */
+
+.admin-orders-page {
+    padding: 24px;
+    background: #fdfdfd;
+    min-height: 100vh;
+    color: #334155;
+}
+
+/* Header */
+.admin-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.admin-page-header h1 { font-size: 24px; color: #1e293b; }
+.admin-page-header p { color: #64748b; font-size: 14px; }
+.export-btn { 
+    display: flex; align-items: center; gap: 8px; 
+    padding: 10px 18px; background: white; border: 1px solid #e2e8f0;
+    border-radius: 10px; cursor: pointer; font-weight: 500;
+}
+
+/* Stats Grid */
+.admin-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.stat-box {
+    background: white; padding: 20px; border-radius: 16px;
+    display: flex; align-items: center; gap: 15px;
+    border: 1px solid #f1f5f9;
+}
+.stat-icon-wrap { padding: 12px; border-radius: 12px; }
+.stat-icon-wrap.blue { background: #eff6ff; color: #3b82f6; }
+.stat-icon-wrap.yellow { background: #fffbeb; color: #d97706; }
+.stat-icon-wrap.green { background: #f0fdf4; color: #16a34a; }
+.stat-icon-wrap.gold { background: #fdfaf3; color: #c19d68; }
+.stat-info span { font-size: 12px; color: #64748b; font-weight: 500; }
+.stat-info h3 { margin: 0; font-size: 20px; color: #1e293b; }
+
+/* Table Controls */
+.admin-table-controls {
+    display: flex; justify-content: space-between; margin-bottom: 20px; gap: 15px;
+}
+.search-wrapper {
+    background: white; display: flex; align-items: center; gap: 10px;
+    padding: 10px 15px; border-radius: 12px; border: 1px solid #e2e8f0; width: 400px;
+}
+.search-wrapper input { border: none; outline: none; width: 100%; font-size: 14px; }
+.filter-group {
+    background: white; display: flex; align-items: center; gap: 10px;
+    padding: 10px 15px; border-radius: 12px; border: 1px solid #e2e8f0;
+}
+.filter-group select { border: none; outline: none; background: transparent; cursor: pointer; font-weight: 500; }
+
+/* Table */
+.admin-table-container {
+    background: white; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden;
+}
+.pro-admin-table { width: 100%; border-collapse: collapse; text-align: left; }
+.pro-admin-table th { 
+    background: #f8fafc; padding: 15px 20px; font-size: 12px; 
+    text-transform: uppercase; color: #64748b; font-weight: 600;
+}
+.pro-admin-table tr { border-bottom: 1px solid #f1f5f9; cursor: pointer; transition: 0.2s; }
+.pro-admin-table tr:hover { background: #f8fafc; }
+.pro-admin-table td { padding: 16px 20px; font-size: 14px; }
+
+.id-cell { font-family: 'Courier New', Courier, monospace; font-weight: 700; color: #7C877F; }
+.customer-cell { display: flex; align-items: center; gap: 10px; font-weight: 500; }
+.initial-avatar { 
+    width: 32px; height: 32px; background: #c19d68; color: white;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;
+}
+.amount-cell { font-weight: 700; color: #1e293b; }
+
+/* Status Pills */
+.status-pill {
+    padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase;
+}
+.status-pill.pending { background: #fef9c3; color: #854d0e; }
+.status-pill.shipped { background: #dbeafe; color: #1e40af; }
+.status-pill.delivered { background: #dcfce7; color: #166534; }
+.status-pill.cancelled { background: #fee2e2; color: #991b1b; }
+
+/* Drawer / Side Modal */
+.drawer-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.3); backdrop-filter: blur(4px);
+    display: flex; justify-content: flex-end; z-index: 1000;
+}
+.order-drawer {
+    width: 100%; max-width: 450px; background: white; height: 100%;
+    animation: slideLeft 0.3s ease; display: flex; flex-direction: column;
+}
+@keyframes slideLeft { from { transform: translateX(100%); } to { transform: translateX(0); } }
+
+.drawer-header {
+    padding: 20px; border-bottom: 1px solid #e2e8f0; display: flex; 
+    justify-content: space-between; align-items: center;
+}
+.drawer-header h2 { font-size: 18px; margin: 0; }
+.drawer-header button { background: none; border: none; cursor: pointer; color: #64748b; }
+
+.drawer-content { padding: 25px; overflow-y: auto; flex: 1; }
+
+.status-timeline { background: #f8fafc; padding: 15px; border-radius: 12px; margin-bottom: 25px; }
+.status-actions-row { display: flex; gap: 10px; margin-top: 10px; }
+.btn-p { 
+    flex: 1; padding: 10px; border: none; border-radius: 8px; 
+    font-weight: 600; cursor: pointer; font-size: 13px;
+}
+.btn-p.ship { background: #7C877F; color: white; }
+.btn-p.deliver { background: #c19d68; color: white; }
+.btn-p.cancel { background: #fef2f2; color: #ef4444; }
+
+.drawer-section { margin-bottom: 25px; }
+.drawer-section h4 { 
+    display: flex; align-items: center; gap: 8px; font-size: 13px;
+    color: #64748b; margin-bottom: 12px; text-transform: uppercase;
+}
+.info-card { background: #fff; border: 1px solid #e2e8f0; padding: 15px; border-radius: 12px; }
+.info-card p { margin: 5px 0; font-size: 14px; display: flex; align-items: center; gap: 8px; }
+
+.mini-item-card { 
+    display: flex; align-items: center; gap: 12px; padding: 10px;
+    border-bottom: 1px solid #f1f5f9;
+}
+.mini-item-card img { width: 45px; height: 45px; border-radius: 8px; object-fit: cover; }
+.mi-info p { margin: 0; font-size: 14px; font-weight: 600; }
+.mi-info span { font-size: 12px; color: #64748b; }
+.mi-total { margin-left: auto; font-weight: 700; }
+
+.drawer-footer { border-top: 2px dashed #f1f5f9; padding-top: 20px; }
+.df-row { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 8px; }
+.grand-total { font-size: 18px; font-weight: 800; color: #1e293b; margin-top: 10px; }
+
+.stack-preview { display: flex; align-items: center; }
+.stack-img { width: 30px; height: 30px; border-radius: 6px; border: 2px solid white; margin-right: -10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.stack-count { margin-left: 15px; font-size: 12px; color: #64748b; font-weight: 600; }
